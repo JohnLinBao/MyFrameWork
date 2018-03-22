@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFF00</color>
+    <color name="colorPrimaryDark">#00000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorMyProgressBar">#0000EE</color>//加载圆圈颜色
+    <!--主题颜色-->
+    <color name="theme_color">#3086EE</color>
+    <color name="theme_color_hx">#1056AC</color>
+    <color name="grey">#EDEDED</color>
+    <color name="half_transparent">#C000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="color_009FDC">#009FDC</color>
+    <color name="word__hx">#e5e5e5</color>
+    <color name="word__nx">#eeeeee</color>
+</resources>

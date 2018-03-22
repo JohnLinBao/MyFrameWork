@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_dynamic_resume_linearlayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更新了求职简历"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:textSize="15sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDEDED"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/item_dynamic_resume_userhead"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/item_dynamic_resume_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_dynamic_resume_userhead"
+            android:text="张彭"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/item_dynamic_resume_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_dynamic_resume_name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_dynamic_resume_userhead"
+            android:text="北京市 | 1-5年 | 本科"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_dynamic_resume_createtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-03-09"
+            android:textSize="10sp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/item_dynamic_resume_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D3D3D3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/item_dynamic_resume_userhead"/>
+
+        <TextView
+            android:id="@+id/item_dynamic_resume_workexperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工作经验："
+            android:textSize="8sp"
+            android:layout_below="@+id/item_dynamic_resume_imageview"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/item_dynamic_resume_workexperience_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017.2-2017.9  7个月"
+            android:textSize="8sp"
+            android:layout_below="@+id/item_dynamic_resume_imageview"
+            android:layout_toRightOf="@+id/item_dynamic_resume_workexperience"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:id="@+id/item_dynamic_resume_workexperience_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上海宏源暖通公司  设计师"
+            android:textSize="8sp"
+            android:layout_alignStart="@+id/item_dynamic_resume_workexperience_time"
+            android:layout_alignLeft="@+id/item_dynamic_resume_workexperience_time"
+            android:layout_below="@+id/item_dynamic_resume_workexperience_time"/>
+    </RelativeLayout>
+</LinearLayout>

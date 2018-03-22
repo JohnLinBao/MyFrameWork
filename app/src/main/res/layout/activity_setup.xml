@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_header"></include>
+
+    <!--新消息通知-->
+    <LinearLayout
+        android:id="@+id/setup_newmessage_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/setup_newmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="新消息通知"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/setup_newmessage_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_icon"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/setup_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/grey"
+        android:layout_below="@+id/setup_newmessage_linearlayout"/>
+
+    <!--修改密码-->
+    <LinearLayout
+        android:id="@+id/setup_editpassword_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/setup_line">
+
+        <TextView
+            android:id="@+id/setup_editpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="修改密码"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/setup_editpassword_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_icon"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/setup_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@+id/setup_editpassword_linearlayout"/>
+
+    <!--清理缓存-->
+    <LinearLayout
+        android:id="@+id/setup_clearcache_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/setup_line1">
+
+        <TextView
+            android:id="@+id/setup_clearcache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="清理缓存"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/setup_clearcache_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.00M"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/setup_clearcache_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_icon"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/setup_line2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/grey"
+        android:layout_below="@+id/setup_clearcache_linearlayout"/>
+
+    <!--问题反馈-->
+    <LinearLayout
+        android:id="@+id/setup_feedback_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/setup_line2">
+
+        <TextView
+            android:id="@+id/setup_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="问题反馈"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/setup_feedback_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_icon"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/setup_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@+id/setup_feedback_linearlayout"/>
+
+    <!--给个好评-->
+    <LinearLayout
+        android:id="@+id/setup_goodreputation_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/setup_line3">
+
+        <TextView
+            android:id="@+id/setup_goodreputation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="给个好评"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/setup_goodreputation_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_icon"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/setup_line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@+id/setup_goodreputation_linearlayout"/>
+
+    <!--关于筑链-->
+    <LinearLayout
+        android:id="@+id/setup_aboutus_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/setup_line4">
+
+        <TextView
+            android:id="@+id/setup_aboutus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="关于筑链"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/setup_aboutus_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_icon"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/setup_logout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="退出登录"
+        android:textSize="21sp"
+        android:textColor="@color/white"
+        android:background="@color/theme_color"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

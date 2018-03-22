@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/layout_header"></include>
+
+            <ImageView
+                android:id="@+id/useredit_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/useredit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+
+                android:textColor="@color/black"
+                android:layout_below="@+id/toolbar"
+                android:layout_toRightOf="@+id/useredit_head"/>
+
+            <ImageView
+                android:id="@+id/useredit_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignTop="@+id/useredit_name"
+                android:layout_alignBottom="@+id/useredit_name"
+                android:layout_toRightOf="@+id/useredit_name"/>
+
+            <TextView
+                android:id="@+id/useredit_baseedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="编辑"
+                android:textColor="@color/theme_color"
+                android:layout_alignTop="@+id/useredit_name"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/useredit_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/useredit_head"
+                android:layout_below="@+id/useredit_name"
+                 />
+
+            <TextView
+                android:id="@+id/useredit_registername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/useredit_head"
+                android:layout_below="@+id/useredit_position"
+                 />
+
+
+            <ImageView
+                android:id="@+id/useredit_phone_image"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/tel_icon"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/useredit_head"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:id="@+id/useredit_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="8sp"
+                android:layout_alignTop="@+id/useredit_phone_image"
+                android:layout_alignBottom="@+id/useredit_phone_image"
+                android:layout_toRightOf="@+id/useredit_phone_image"/>
+
+            <ImageView
+                android:id="@+id/useredit_email_image"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:visibility="gone"
+                android:src="@drawable/youxaing_icon"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/useredit_phone_image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/useredit_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/theme_color"
+                android:textSize="8sp"
+                android:layout_alignTop="@+id/useredit_email_image"
+                android:layout_alignBottom="@+id/useredit_email_image"
+                android:layout_toRightOf="@+id/useredit_email_image"/>
+
+            <ImageView
+                android:id="@+id/useredit_companylogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/useredit_phone_image"
+                android:layout_alignBottom="@+id/useredit_email_image"/>
+
+            <TextView
+                android:id="@+id/useredit_brife"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/useredit_email_image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:id="@+id/useredit_line"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/grey"
+                android:layout_below="@+id/useredit_brife"/>
+
+            <LinearLayout
+                android:id="@+id/useredit_dynamic_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/useredit_line"
+                >
+
+                <TextView
+                    android:id="@+id/useredit_releasedanymic_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="发布的动态（8)"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:layout_width="2dp"
+                    android:layout_height="50dp"
+                    android:background="@color/grey"/>
+
+                <TextView
+                    android:id="@+id/useredit_releaserecruitment_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="发布的职位（8)"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+            </LinearLayout>
+
+
+            <!--工作经历-->
+            <TextView
+                android:id="@+id/useredit_workexperience_title"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="工作经历"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:layout_below="@id/useredit_dynamic_linearlayout"/>
+
+            <RelativeLayout
+                android:id="@+id/useredit_workexperience_relativelayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/useredit_workexperience_title">
+
+                <TextView
+                    android:id="@+id/useredit_workexperience_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加工作经历"
+                    android:textColor="@color/theme_color"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/useredit_workexperience_addimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tianjiaxinxi_blue2x"
+                    android:layout_toLeftOf="@+id/useredit_workexperience_add"
+                    android:layout_alignTop="@+id/useredit_workexperience_add"
+                    android:layout_alignBottom="@id/useredit_workexperience_add"
+                    android:layout_marginRight="5dp"/>
+            </RelativeLayout>
+            <!--教育经历-->
+            <TextView
+                android:id="@+id/useredit_education_title"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教育经历"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:layout_below="@id/useredit_workexperience_relativelayout"/>
+
+            <RelativeLayout
+                android:id="@+id/useredit_education_relativelayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/useredit_education_title">
+
+                <TextView
+                    android:id="@+id/useredit_education_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加教育经历"
+                    android:textColor="@color/theme_color"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/useredit_education_addimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tianjiaxinxi_blue2x"
+                    android:layout_toLeftOf="@+id/useredit_education_add"
+                    android:layout_alignTop="@+id/useredit_education_add"
+                    android:layout_alignBottom="@id/useredit_education_add"
+                    android:layout_marginRight="5dp"/>
+            </RelativeLayout>
+            <!--项目经历-->
+            <TextView
+                android:id="@+id/useredit_project_title"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目经历"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:layout_below="@id/useredit_education_relativelayout"/>
+
+            <RelativeLayout
+                android:id="@+id/useredit_project_relativelayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/useredit_project_title">
+
+                <TextView
+                    android:id="@+id/useredit_project_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加项目经历"
+                    android:textColor="@color/theme_color"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/useredit_project_addimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tianjiaxinxi_blue2x"
+                    android:layout_toLeftOf="@+id/useredit_project_add"
+                    android:layout_alignTop="@+id/useredit_project_add"
+                    android:layout_alignBottom="@id/useredit_project_add"
+                    android:layout_marginRight="5dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/useredit_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="编辑资料"
+        android:textSize="21sp"
+        android:textColor="@color/white"
+        android:background="@color/theme_color"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"/>
+
+</RelativeLayout>

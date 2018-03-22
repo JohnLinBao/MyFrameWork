@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_header"></include>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/recruitment_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text="建筑设计师"
+                android:textSize="15sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/recruitment_salary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                android:text="【基本工资8K-15K+提成】"
+                android:layout_toRightOf="@+id/recruitment_position"
+                android:textColor="@android:color/holo_red_light" />
+
+            <ImageView
+                android:id="@+id/recruitment_location_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zhiwei_dizhi"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/recruitment_position"/>
+
+            <TextView
+                android:id="@+id/recruitment_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="北京"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_toRightOf="@+id/recruitment_location_image"
+                android:layout_below="@+id/recruitment_position"/>
+
+            <ImageView
+                android:id="@+id/recruitment_workyear_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gongzuonianxian"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/recruitment_location"
+                android:layout_below="@+id/recruitment_position"/>
+
+            <TextView
+                android:id="@+id/recruitment_workyear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-3年"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_toRightOf="@+id/recruitment_workyear_image"
+                android:layout_below="@+id/recruitment_position"/>
+
+            <ImageView
+                android:id="@+id/recruitment_degree_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zhiwei_benke"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/recruitment_workyear"
+                android:layout_below="@+id/recruitment_position"/>
+
+            <TextView
+                android:id="@+id/recruitment_degree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本科"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_toRightOf="@+id/recruitment_degree_image"
+                android:layout_below="@+id/recruitment_position"/>
+
+            <ImageView
+                android:id="@+id/recruitment_duration_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zhiwei_quanzhi"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/recruitment_degree"
+                android:layout_below="@+id/recruitment_position"/>
+
+            <TextView
+                android:id="@+id/recruitment_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全职"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_toRightOf="@+id/recruitment_duration_image"
+                android:layout_below="@+id/recruitment_position"/>
+
+            <ImageView
+                android:id="@+id/recruitment_workintroduce_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zhiwei_xifenhangye"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/recruitment_location_image"/>
+
+            <TextView
+                android:id="@+id/recruitment_workintroduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="勘探设计-建筑设计"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_toRightOf="@+id/recruitment_workintroduce_image"
+                android:layout_below="@+id/recruitment_location"/>
+
+            <ImageView
+                android:id="@+id/recruitment_xifenjob_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zhiwei_gaogong"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/recruitment_workintroduce_image"/>
+
+            <TextView
+                android:id="@+id/recruitment_xifenjob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="助理"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_toRightOf="@+id/recruitment_xifenjob_image"
+                android:layout_below="@+id/recruitment_workintroduce"/>
+
+            <ImageView
+                android:id="@+id/recruitment_line"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/grey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/recruitment_xifenjob_image"/>
+
+            <ImageView
+                android:id="@+id/recruitment_companylogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/recruitment_line"/>
+
+            <TextView
+                android:id="@+id/recruitment_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="北京院"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/recruitment_companylogo"
+                android:layout_below="@+id/recruitment_line"/>
+
+            <TextView
+                android:id="@+id/recruitment_companyprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="国有企业  |  2000-5000人"
+                android:textSize="12sp"
+                android:layout_toRightOf="@+id/recruitment_companylogo"
+                android:layout_below="@+id/recruitment_company"/>
+
+            <TextView
+                android:id="@+id/recruitment_main_business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="工程勘探设计  |  工程设计等甲等"
+                android:textSize="12sp"
+                android:layout_toRightOf="@+id/recruitment_companylogo"
+                android:layout_below="@+id/recruitment_companyprofile"/>
+
+            <ImageView
+                android:id="@+id/recruitment_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zhiwei_gognsijieshao_arrow"
+                android:layout_below="@+id/recruitment_line"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignTop="@+id/recruitment_companylogo"
+                android:layout_alignBottom="@+id/recruitment_companylogo"/>
+
+            <!--职位描述-->
+            <ImageView
+                android:id="@+id/recruitment_line1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/grey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/recruitment_companylogo"/>
+
+            <ImageView
+                android:id="@+id/recruitment_jobprofile_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gognsijieshao_icon"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/recruitment_line1"/>
+
+            <TextView
+                android:id="@+id/recruitment_jobprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="职位描述"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/recruitment_jobprofile_image"
+                android:layout_below="@+id/recruitment_line1"/>
+
+            <ImageView
+                android:id="@+id/recruitment_line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/recruitment_jobprofile"/>
+
+            <TextView
+                android:id="@+id/recruitment_jobprofile_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/recruitment_line2"
+                android:layout_marginLeft="10dp"
+                android:text="建筑施工图设计."
+                android:textSize="13sp"/>
+
+            <!--工作地点-->
+            <ImageView
+                android:id="@+id/recruitment_line3"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/grey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/recruitment_jobprofile_detail"/>
+
+            <ImageView
+                android:id="@+id/recruitment_joblocation_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zhiwei_dizhi"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/recruitment_line3"/>
+
+            <TextView
+                android:id="@+id/recruitment_joblocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="工作地点"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/recruitment_joblocation_image"
+                android:layout_below="@+id/recruitment_line3"/>
+
+            <ImageView
+                android:id="@+id/recruitment_line4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/recruitment_joblocation"/>
+
+            <TextView
+                android:id="@+id/recruitment_joblocation_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/recruitment_line4"
+                android:layout_marginLeft="10dp"
+                android:text="北京市  |  北京市  |  西城区  |  南里吐露62号"
+                android:textSize="13sp"/>
+
+            <!--职位发布者-->
+
+            <ImageView
+                android:id="@+id/recruitment_line5"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/grey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/recruitment_joblocation_detail"/>
+
+            <ImageView
+                android:id="@+id/recruitment_jobreleaser_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zhiweifabuzhe"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/recruitment_line5"/>
+
+            <TextView
+                android:id="@+id/recruitment_jobreleaser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="职位发布者"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/recruitment_jobreleaser_image"
+                android:layout_below="@+id/recruitment_line5"/>
+
+            <ImageView
+                android:id="@+id/recruitment_line6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/recruitment_jobreleaser"/>
+
+            <ImageView
+                android:id="@+id/recruitment_jobreleaser_head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/recruitment_line6"/>
+
+            <TextView
+                android:id="@+id/recruitment_jobreleaser_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李小玲"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/recruitment_jobreleaser_head"
+                android:layout_below="@+id/recruitment_line6"/>
+
+            <TextView
+                android:id="@+id/recruitment_jobreleaser_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高级建筑设计师"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/recruitment_jobreleaser_head"
+                android:layout_below="@+id/recruitment_jobreleaser_name"/>
+
+            <ImageView
+                android:id="@+id/recruitment_releaser_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zhiwei_gognsijieshao_arrow"
+                android:layout_below="@+id/recruitment_line6"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignTop="@+id/recruitment_jobreleaser_head"
+                android:layout_alignBottom="@+id/recruitment_jobreleaser_head"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="投个简历"
+            android:textSize="21sp"
+            android:textColor="@color/theme_color"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="和TA聊聊"
+            android:textSize="21sp"
+            android:textColor="@color/white"
+            android:background="@color/theme_color"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

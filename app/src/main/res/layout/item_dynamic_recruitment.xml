@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_dynamic_recruitment_linearlayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更新了招聘职位"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#EDEDED">
+
+        <ImageView
+            android:id="@+id/item_dynamic_recruitment_companylogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/item_dynamic_recruitment_positionname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_dynamic_recruitment_companylogo"
+            android:text="建筑工程师"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/item_dynamic_recruitment_workdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_dynamic_recruitment_positionname"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_dynamic_recruitment_companylogo"
+            android:text="北京市 | 1-5年 | 本科"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_dynamic_recruitment_companyprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_dynamic_recruitment_workdetail"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_dynamic_recruitment_companylogo"
+            android:text="北京院 | 国有企业 | 2000-5000人"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/item_dynamic_recruitment_workrequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_dynamic_recruitment_companyprofile"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_dynamic_recruitment_companylogo"
+            android:text="工程勘探"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/item_dynamic_recruitment_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:text="8k-15k"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_dynamic_recruitment_createtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_dynamic_recruitment_workrequest"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:text="2018-03-08"
+            android:textSize="8sp" />
+    </RelativeLayout>
+</LinearLayout>

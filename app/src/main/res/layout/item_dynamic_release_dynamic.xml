@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_dynamic_release_dynamic_linearlayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/item_dynamic_release_dynamic_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="一位建筑设计师走遍世界并用画笔记录下的这奇妙的景色"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_dynamic_release_dynamic_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <include layout="@layout/layout_header"></include>
+    
+    <ImageView
+        android:id="@+id/aboutus_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:src="@drawable/guanyuzhulian"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/aboutus_brife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="建筑人社交求职招聘神器"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/aboutus_image"/>
+
+    <TextView
+        android:id="@+id/aboutus_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V1.0.7"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/aboutus_company"/>
+
+    <TextView
+        android:id="@+id/aboutus_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上海奇筑网络科技有限公司"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"/>
+</RelativeLayout>

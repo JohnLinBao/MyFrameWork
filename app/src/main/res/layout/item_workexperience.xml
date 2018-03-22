@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_workexperience_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gongzuojignli_tiao_icon"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"/>
+
+        <ImageView
+            android:id="@+id/item_workexperience_line"
+            android:layout_width="1dp"
+            android:layout_height="150dp"
+            android:background="@color/grey"
+            android:layout_below="@+id/item_workexperience_image"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/item_workexperience_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2014.9-至今"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/item_workexperience_image"/>
+
+        <TextView
+            android:id="@+id/item_workexperience_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3年10个月"
+            android:textSize="10sp"
+            android:layout_alignTop="@+id/item_workexperience_date"
+            android:layout_alignBottom="@+id/item_workexperience_date"
+            android:layout_toRightOf="@+id/item_workexperience_date"/>
+
+        <ImageView
+            android:id="@+id/item_workexperience_companylogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_below="@+id/item_workexperience_date"
+            android:layout_toRightOf="@+id/item_workexperience_line"/>
+
+        <TextView
+            android:id="@+id/item_workexperience_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京市建筑设计研究院有限公司"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/item_workexperience_companylogo"
+            android:layout_below="@+id/item_workexperience_date"/>
+
+        <TextView
+            android:id="@+id/item_workexperience_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建筑设计师"
+            android:textSize="13sp"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/item_workexperience_company"
+            android:layout_below="@+id/item_workexperience_date"/>
+
+        <TextView
+            android:id="@+id/item_workexperience_duty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工程勘探设计  建筑设计"
+            android:textSize="13sp"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/item_workexperience_companylogo"
+            android:layout_below="@+id/item_workexperience_company"/>
+
+        <TextView
+            android:id="@+id/item_workexperience_introducation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.建筑方案设计；\n2.建筑施工图设计；\n3.领导安排的其他食物。"
+            android:textSize="13sp"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/item_workexperience_line"
+            android:layout_below="@+id/item_workexperience_companylogo"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "757625974261",
+    "firebase_url": "https://fireinthehome-79a08.firebaseio.com",
+    "project_id": "fireinthehome-79a08",
+    "storage_bucket": "fireinthehome-79a08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757625974261:android:5729c8dc1f655663",
+        "android_client_info": {
+          "package_name": "com.alfred.framework.myframework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757625974261-ve6cmra8rgbo4sdvra43num7q3a3qa1s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alfred.framework.myframework",
+            "certificate_hash": "b3650e245018a67b48a7a9b24921a5d6a1ed333d"
+          }
+        },
+        {
+          "client_id": "757625974261-ib1he992jo968k5q8i906g1s7q1rdf8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZcbLf9Wh7ie5SU7_knNGuhq8jr7KXFpM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757625974261-ib1he992jo968k5q8i906g1s7q1rdf8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

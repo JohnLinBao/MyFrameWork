@@ -1,0 +1,1 @@
+package com.alfred.framework.utils;import java.util.List;/** * List列表工具类 * @author	Alfred * */public class ListUtils {	/**	 * List判空函数	 * @param list	 * @return	 */	public static boolean isEmpty(List list){		return list == null||list.size()==0 ? true:false;	}}

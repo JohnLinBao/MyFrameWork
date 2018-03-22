@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_header"></include>
+
+    <ImageView
+        android:id="@+id/register_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/userdefalut"
+        android:layout_gravity="center"
+        android:layout_margin="100dp"
+        />
+
+    <EditText
+        android:id="@+id/register_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="请输入真实的姓名"
+        android:textSize="15sp"
+        android:background="@null"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/register_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="完成，立即进入"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_margin="30dp"
+        android:background="@drawable/btn_selector_gray"/>
+</LinearLayout>

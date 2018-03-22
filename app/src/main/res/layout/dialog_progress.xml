@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/parentView"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_background"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/firstBar"
+            android:layout_width="40dp"
+            android:visibility="gone"
+            android:layout_height="40dp" />
+        <com.mingle.widget.LoadingView
+            android:id="@+id/loadView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+        <TextView
+            android:id="@+id/textview_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="Loading ..."
+            android:textColor="@color/theme_color" />
+    </LinearLayout>
+
+</RelativeLayout>

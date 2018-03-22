@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_header"></include>
+
+    <TextView
+        android:id="@+id/newmessage_inform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新消息通知"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/newmessage_inform_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已开启"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@+id/newmessage_inform"
+        android:layout_alignBottom="@+id/newmessage_inform"/>
+
+    <TextView
+        android:id="@+id/newmessage_inform_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="如果你要更改通知样式，请在设备的“设置”-“通知”选项中，找到“筑链”，进行修改。"
+        android:layout_below="@+id/newmessage_inform"
+        android:padding="10dp"
+        android:background="@color/grey"/>
+
+    <TextView
+        android:id="@+id/newmessage_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示消息内容"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/newmessage_inform_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"/>
+
+    <Switch
+        android:id="@+id/newmessage_show_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/newmessage_show"
+        android:layout_alignBottom="@+id/newmessage_show"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/newmessage_inform_content"
+        android:layout_marginRight="10dp"
+        android:thumb="@drawable/thumb"
+        android:track="@drawable/track"/>
+
+    <TextView
+        android:id="@+id/newmessage_show_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="如果关闭，聊天消息将不再显示发送人和消息内容。"
+        android:layout_below="@+id/newmessage_show"
+        android:padding="10dp"
+        android:background="@color/grey"/>
+
+    <TextView
+        android:id="@+id/newmessage_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="声音"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/newmessage_show_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"/>
+
+    <Switch
+        android:id="@+id/newmessage_voice_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/newmessage_voice"
+        android:layout_alignBottom="@+id/newmessage_voice"
+        android:layout_below="@+id/newmessage_show_content"
+        android:thumb="@drawable/thumb"
+        android:track="@drawable/track"/>
+</RelativeLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_header"></include>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/otheruser_detail_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher"
+                    android:layout_margin="20dp"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/otheruser_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="李小玲"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_toRightOf="@+id/otheruser_detail_head"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/otheruser_detail_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/xingbie_nv2x"
+                    android:layout_toRightOf="@+id/otheruser_detail_name"
+                    android:layout_alignTop="@+id/otheruser_detail_name"
+                    android:layout_alignBottom="@+id/otheruser_detail_name"/>
+
+                <TextView
+                    android:id="@+id/otheruser_detail_company_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="北京 / 北京院 / 高级建筑设计师"
+                    android:textSize="10sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/otheruser_detail_head"
+                    android:layout_below="@+id/otheruser_detail_name"/>
+
+                <TextView
+                    android:id="@+id/otheruser_detail_work_introduction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工程勘探 | 助工 | 一级注册建筑师"
+                    android:textSize="10sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/otheruser_detail_head"
+                    android:layout_below="@+id/otheruser_detail_company_position"/>
+
+                <ImageView
+                    android:id="@+id/otheruser_detail_phoneimage"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/tel_icon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@+id/otheruser_detail_head"/>
+
+                <TextView
+                    android:id="@+id/otheruser_detail_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加为好友后可见"
+                    android:textSize="8sp"
+                    android:textColor="@color/theme_color"
+                    android:layout_toRightOf="@+id/otheruser_detail_phoneimage"
+                    android:layout_below="@+id/otheruser_detail_head"
+                    android:layout_alignBottom="@+id/otheruser_detail_phoneimage"
+                    android:layout_alignTop="@+id/otheruser_detail_phoneimage" />
+
+                <ImageView
+                    android:id="@+id/otheruser_detail_emailimage"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/youxaing_icon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@+id/otheruser_detail_phoneimage"/>
+
+                <TextView
+                    android:id="@+id/otheruser_detail_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加为好友后可见"
+                    android:textSize="8sp"
+                    android:textColor="@color/theme_color"
+                    android:layout_toRightOf="@+id/otheruser_detail_emailimage"
+                    android:layout_below="@+id/otheruser_detail_phone"
+                    android:layout_alignBottom="@+id/otheruser_detail_emailimage"
+                    android:layout_alignTop="@+id/otheruser_detail_emailimage" />
+
+                <TextView
+                    android:id="@+id/otheruser_detail_personal_signature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/youxaing_icon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="我要成为大咖！"
+                    android:textSize="8sp"
+                    android:layout_below="@+id/otheruser_detail_emailimage"/>
+
+                <ImageView
+                    android:id="@+id/otheruser_detail_companylogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/otheruser_detail_phone"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:background="@color/grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/otheruser_detail_released_dynamic"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="发布的动态（8)"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:background="@color/grey"/>
+
+                    <TextView
+                        android:id="@+id/otheruser_detail_released_position"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="发布的职位（8)"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/otheruser_detail_workexperience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工作经历"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/otheruser_detail_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+        <TextView
+            android:id="@+id/otheruser_detail_addfriend"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="加好友"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:background="@color/theme_color"
+            android:layout_alignParentBottom="true"/>
+</RelativeLayout>
