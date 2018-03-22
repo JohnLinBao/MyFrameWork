@@ -113,7 +113,7 @@ public class UserEditActivity extends BaseActivity {
     public void disposeProcess() {
         usereditButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {//.,.,...,.,.
                 if (!editFlag){
                     editFlag = true;
                     usereditButton.setText("完成");
