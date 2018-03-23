@@ -1,13 +1,20 @@
 package com.alfred.framework.module.model.home;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.support.v7.view.ContextThemeWrapper;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TableRow;
@@ -17,6 +24,9 @@ import com.alfred.framework.base.config.AppConfig;
 import com.alfred.framework.http.BaseResponse;
 import com.alfred.framework.http.OkHttpManager;
 import com.alfred.framework.module.model.User_Bean;
+import com.alfred.framework.module.model.share.ShareDialogFragment;
+import com.alfred.framework.module.model.share.ShareDialogType;
+import com.alfred.framework.module.model.share.ShareDialogViewBinder;
 import com.alfred.framework.myframework.R;
 import com.alfred.framework.utils.GsonUtils;
 import com.alfred.framework.utils.StringUtils;
@@ -28,6 +38,8 @@ import java.lang.reflect.Type;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import me.drakeet.multitype.Items;
+import me.drakeet.multitype.MultiTypeAdapter;
 import okhttp3.RequestBody;
 
 /**
@@ -73,10 +85,12 @@ public class UserFragment extends Fragment {
     String city = "";
     String company = "";
     String positin = "";
+    private RecyclerView shareDialogRecyclerView;
+    private MultiTypeAdapter shareDialogAdapter;
+    private Items items;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
+                             final Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_user, container, false);
         ButterKnife.bind(this, v);
@@ -93,6 +107,35 @@ public class UserFragment extends Fragment {
             @Override
             public void onFailure(Exception e) {
 
+            }
+        });
+        /*邀请好友*/
+        userInvitefriend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                  ShareDialogFragment shareDialog = new ShareDialogFragment();
+                  shareDialog.show(getActivity().getSupportFragmentManager(), "share");
+//                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(getActivity(), R.style.share_dialog));
+//                View view = inflater.inflate(R.layout.fragment_sharedialog, null);
+//                builder.setView(view);
+//                shareDialogRecyclerView = view.findViewById(R.id.sharedialog_recyclerview);
+//                shareDialogAdapter = new MultiTypeAdapter();
+//                shareDialogAdapter.register(ShareDialogType.class, new ShareDialogViewBinder());
+//                shareDialogRecyclerView.setAdapter(shareDialogAdapter);
+//                shareDialogRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
+//                items = new Items();
+//                items.add(new ShareDialogType(R.drawable.wechat, "微信好友"));
+//                items.add(new ShareDialogType(R.drawable.pengyouquan, "朋友圈"));
+//                items.add(new ShareDialogType(R.drawable.zhulian, "筑链好友"));
+//                items.add(new ShareDialogType(R.drawable.wechat, "QQ好友"));
+//                shareDialogAdapter.setItems(items);
+//                shareDialogAdapter.notifyDataSetChanged();
+//                AlertDialog shareDialog = builder.create();
+//                DisplayMetrics metrics = new DisplayMetrics();
+//                getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+//                shareDialog.getWindow().setLayout(metrics.widthPixels, WindowManager.LayoutParams.WRAP_CONTENT);
+//                shareDialog.getWindow().setGravity(Gravity.BOTTOM);
+//                shareDialog.show();
             }
         });
         return v;
@@ -130,6 +173,8 @@ public class UserFragment extends Fragment {
                             startActivity(intent);
                         }
                     });
+
+
                     /*朋友个数*/
                     userMyfriendCount.setText(AppConfig.user.friendCount + "");
                     /*发布动态个数*/
