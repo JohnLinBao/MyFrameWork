@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.alfred.framework.base.BaseActivity;
 import com.alfred.framework.base.config.AppConfig;
 import com.alfred.framework.myframework.R;
+import com.alfred.framework.utils.StringUtils;
+import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -82,7 +84,9 @@ public class UserEditActivity extends BaseActivity {
     RelativeLayout usereditProjectRelativelayout;
     @BindView(R.id.useredit_button)
     TextView usereditButton;
-
+    private String city = "";
+    private String company = "";
+    private String position = "";
     boolean editFlag = false;
     @Override
     public void reload() {
@@ -111,9 +115,41 @@ public class UserEditActivity extends BaseActivity {
 
     @Override
     public void disposeProcess() {
+        /*头像*/
+        Glide.with(this).load(AppConfig.user.avatar).into(usereditHead);
+        /*姓名*/
+        usereditName.setText(AppConfig.user.name);
+        /*性别*/
+        if (AppConfig.user.gender == 1)
+            usereditSex.setImageResource(R.drawable.xingbie_nan);
+        else if (AppConfig.user.gender == 2)
+            usereditSex.setImageResource(R.drawable.xingbie_nv);
+        /*城市、公司、职位*/
+        if (AppConfig.user.city != null)
+            city = AppConfig.user.city + "  ";
+        if (AppConfig.user.company != null)
+            company = AppConfig.user.company + "  ";
+        if (AppConfig.user.position != null)
+            position = AppConfig.user.position + "  ";
+        usereditPosition.setText(city + company + position);
+        /*电话*/
+        if (AppConfig.user.phoneNumber != null){
+            usereditPhoneImage.setVisibility(View.VISIBLE);
+            usereditPhone.setText(AppConfig.user.phoneNumber);
+        }
+        /*邮箱*/
+        if (AppConfig.user.email != null){
+            usereditEmailImage.setVisibility(View.VISIBLE);
+            usereditEmail.setText(AppConfig.user.email);
+        }
+        /*一句话介绍*/
+        usereditBrife.setText(AppConfig.user.brief);
+        /*公司logo*/
+        Glide.with(this).load(AppConfig.user.companyLogo).into(usereditCompanylogo);
+        /*编辑用户资料*/
         usereditButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {//.,.,...,.,.
+            public void onClick(View v) {
                 if (!editFlag){
                     editFlag = true;
                     usereditButton.setText("完成");
