@@ -34,7 +34,7 @@
         <activity android:name="com.alfred.framework.module.RegisterActivityTwo"></activity>
         <activity android:name="com.alfred.framework.module.UserAgreementActivity"></activity>
         <activity android:name="com.alfred.framework.module.LoginActivity"></activity>
-        <activity android:name="com.alfred.framework.module.model.home.MainActivity"></activity>
+        <activity android:name="com.alfred.framework.module.model.home.MainActivity" ></activity>
         <activity android:name="com.alfred.framework.module.EditPasswordActivity"></activity>
         <activity android:name="com.alfred.framework.module.model.home.OtherUserActivity"></activity>
         <activity android:name="com.alfred.framework.module.model.home.RecruitmentActivity"></activity>
@@ -43,7 +43,11 @@
         <activity android:name="com.alfred.framework.module.model.home.AboutUsActivity"></activity>
         <activity android:name="com.alfred.framework.module.model.home.NewMessageActivity"></activity>
         <activity android:name="com.alfred.framework.module.model.home.UserEditActivity"></activity>
-
+        <activity android:name="com.alfred.framework.module.model.user_edit.AddWorkexperienceActivity"></activity>
+        <activity android:name="com.alfred.framework.module.model.user_edit.AddEducationActivity"></activity>
+        <activity android:name="com.alfred.framework.module.model.user_edit.AddProjectActivity"></activity>
+        <activity android:name="com.alfred.framework.module.model.user_edit.SelectIndustryActivity"></activity>
+        <activity android:name="com.alfred.framework.module.model.user_edit.SelectProfessionActivity"></activity>
     </application>
 
 </manifest>

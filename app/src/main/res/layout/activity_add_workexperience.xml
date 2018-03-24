@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_header"></include>
+
+    <!--公司-->
+    <TextView
+        android:id="@+id/add_company_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="公司"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/add_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="必填"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignTop="@+id/add_company_title"
+        android:layout_alignBottom="@+id/add_company_title"
+        android:layout_alignLeft="@+id/add_companylogo"
+        android:layout_alignRight="@+id/add_companylogo"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/toolbar"
+        />
+
+    <ImageView
+        android:id="@+id/add_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_company_title"/>
+
+    <!--公司logo-->
+    <TextView
+        android:id="@+id/add_companylogo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="公司LOGO"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_line"
+        android:layout_alignTop="@+id/add_companylogo"
+        android:layout_alignBottom="@+id/add_companylogo"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/add_companylogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shangchuanzhaopian"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/add_line"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/add_line1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_companylogo"/>
+
+    <!--职位-->
+    <TextView
+        android:id="@+id/add_position_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="职位"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_line1"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/add_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="必填"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignTop="@+id/add_position_title"
+        android:layout_alignBottom="@+id/add_position_title"
+        android:layout_alignLeft="@+id/add_companylogo"
+        android:layout_alignRight="@+id/add_companylogo"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/add_line1"/>
+
+    <ImageView
+        android:id="@+id/add_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_position_title"/>
+
+    <!--细分行业-->
+    <TextView
+        android:id="@+id/add_industry_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="细分行业"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_line2"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/add_industry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="必选"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignTop="@+id/add_industry_title"
+        android:layout_alignBottom="@+id/add_industry_title"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/add_industry_arrow"
+        android:layout_below="@+id/add_line2"/>
+
+    <ImageView
+        android:id="@+id/add_industry_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_icon"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/add_line2"
+        android:layout_alignTop="@+id/add_industry_title"
+        android:layout_alignBottom="@+id/add_industry_title"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/add_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_industry_title"/>
+
+    <!--职能/专业-->
+    <TextView
+        android:id="@+id/add_function_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="职能/专业"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_line3"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/add_function"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="必选"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignTop="@+id/add_function_title"
+        android:layout_alignBottom="@+id/add_function_title"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/add_function_arrow"
+        android:layout_below="@+id/add_line3"/>
+
+    <ImageView
+        android:id="@+id/add_function_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_icon"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/add_line3"
+        android:layout_alignTop="@+id/add_function_title"
+        android:layout_alignBottom="@+id/add_function_title"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/add_line4"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_function_title"/>
+
+    <!--开始时间-->
+    <TextView
+        android:id="@+id/add_starttime_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始时间"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_line4"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/add_starttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="必选"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignTop="@+id/add_starttime_title"
+        android:layout_alignBottom="@+id/add_starttime_title"
+
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/add_starttime_arrow"
+        android:layout_below="@+id/add_line4"/>
+
+    <ImageView
+        android:id="@+id/add_starttime_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_icon"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/add_line4"
+        android:layout_alignTop="@+id/add_starttime_title"
+        android:layout_alignBottom="@+id/add_starttime_title"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/add_line5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_starttime_title"/>
+
+    <!--结束时间-->
+    <TextView
+        android:id="@+id/add_endtime_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结束时间"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_line5"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/add_endtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="必选"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignTop="@+id/add_endtime_title"
+        android:layout_alignBottom="@+id/add_endtime_title"
+
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/add_endtime_arrow"
+        android:layout_below="@+id/add_line5"/>
+
+    <ImageView
+        android:id="@+id/add_endtime_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_icon"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/add_line4"
+        android:layout_alignTop="@+id/add_endtime_title"
+        android:layout_alignBottom="@+id/add_endtime_title"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/add_line6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_endtime_title"/>
+    <!--工作内容-->
+    <TextView
+        android:id="@+id/add_workdetail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="工作内容"
+        android:background="@color/grey"
+        android:padding="10dp"
+        android:layout_below="@id/add_line6"/>
+
+    <EditText
+        android:id="@+id/add_workdetail"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:textSize="13sp"
+        android:maxLength="1000"
+        android:hint="可参考如下格式：\n\n【工作职责】\n简要描述你的工作内容和职责范围等\n\n【项目经历及成绩】\n简要描述你的项目经历及获得的成绩等"
+        android:layout_below="@+id/add_workdetail_title"/>
+</RelativeLayout>

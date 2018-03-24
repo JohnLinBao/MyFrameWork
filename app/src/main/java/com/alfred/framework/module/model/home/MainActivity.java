@@ -1,5 +1,6 @@
 package com.alfred.framework.module.model.home;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 
 import com.alfred.framework.base.BaseActivity;
 import com.alfred.framework.http.OkHttpManager;
+import com.alfred.framework.module.model.share.ShareDialogFragment;
 import com.alfred.framework.myframework.R;
 
 import java.util.HashMap;
@@ -30,7 +32,7 @@ import okhttp3.RequestBody;
  * Created by asus on 2018/3/1.
  */
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements ShareDialogFragment.OnFragmentInteractionListener {
     @BindView(R.id.maincontent)
     FrameLayout maincontent;
     @BindView(android.R.id.tabcontent)
@@ -138,4 +140,8 @@ public class MainActivity extends BaseActivity {
         barProxy.setTitle("主页", View.VISIBLE);
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }

@@ -1,5 +1,6 @@
 package com.alfred.framework.module.model.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -10,12 +11,13 @@ import android.widget.TextView;
 
 import com.alfred.framework.base.BaseActivity;
 import com.alfred.framework.base.config.AppConfig;
+import com.alfred.framework.module.model.user_edit.AddEducationActivity;
+import com.alfred.framework.module.model.user_edit.AddProjectActivity;
+import com.alfred.framework.module.model.user_edit.AddWorkexperienceActivity;
 import com.alfred.framework.myframework.R;
-import com.alfred.framework.utils.StringUtils;
 import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Created by asus on 2018/3/22.
@@ -88,6 +90,10 @@ public class UserEditActivity extends BaseActivity {
     private String company = "";
     private String position = "";
     boolean editFlag = false;
+    final int WORK = 1;
+    final int EDUCATION = 2;
+    final int PROJECT = 3;
+
     @Override
     public void reload() {
 
@@ -156,12 +162,35 @@ public class UserEditActivity extends BaseActivity {
                     usereditBaseedit.setVisibility(View.VISIBLE);
                     usereditWorkexperienceTitle.setVisibility(View.VISIBLE);
                     usereditWorkexperienceRelativelayout.setVisibility(View.VISIBLE);
+                    //添加工作经历
+                    usereditWorkexperienceRelativelayout.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent workIntent = new Intent(UserEditActivity.this, AddWorkexperienceActivity.class);
+                            startActivityForResult(workIntent, WORK);
+                        }
+                    });
                     usereditEducationTitle.setVisibility(View.VISIBLE);
                     usereditEducationRelativelayout.setVisibility(View.VISIBLE);
+                    //添加教育经历
+                    usereditEducationRelativelayout.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent educationIntent = new Intent(UserEditActivity.this, AddEducationActivity.class);
+                            startActivityForResult(educationIntent, EDUCATION);
+                        }
+                    });
                     usereditProjectTitle.setVisibility(View.VISIBLE);
                     usereditProjectRelativelayout.setVisibility(View.VISIBLE);
-                }else
-                {
+                    //添加项目经历
+                    usereditProjectRelativelayout.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent projectIntent = new Intent(UserEditActivity.this, AddProjectActivity.class);
+                            startActivityForResult(projectIntent, PROJECT);
+                        }
+                    });
+                }else {
                     editFlag = false;
                     usereditButton.setText("编辑资料");
                     usereditBaseedit.setVisibility(View.GONE);

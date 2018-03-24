@@ -24,7 +24,7 @@ android {
         resValue("string", 'app_version', APP_VERSION)
         resValue("string", 'app_version_show', APP_VERSION_CODE)
         ndk {
-            abiFilters "armeabi" ,"x86"
+            abiFilters "armeabi", "x86"
         }
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexKeepProguard file("keep_in_main_dex.txt")
@@ -35,19 +35,19 @@ android {
             minifyEnabled false
             zipAlignEnabled false
             shrinkResources false
-            buildConfigField 'String','SERVER_URL',RELEASE_SERVER_URL
+            buildConfigField 'String', 'SERVER_URL', RELEASE_SERVER_URL
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
 
         debug {
             //signingConfig signingConfigs.release
-            buildConfigField 'String','SERVER_URL',DEVELOP_SERVER_URL
+            buildConfigField 'String', 'SERVER_URL', DEVELOP_SERVER_URL
         }
 
         ysc {
             //signingConfig signingConfigs.release
-            buildConfigField 'String','SERVER_URL',DEVELOP_SERVER_URL
+            buildConfigField 'String', 'SERVER_URL', DEVELOP_SERVER_URL
         }
     }
     packagingOptions {
@@ -80,13 +80,14 @@ android {
             }
         }
     }*/
-    }
+}
 
-    def buildTime() {
-        def date = new Date()
-        def formattedDate = date.format('yyyyMMddHHmmss')
-        return formattedDate
-    }
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmmss')
+    return formattedDate
+}
+
 repositories {
     maven {
         url "http://maven.aliyun.com/nexus/content/repositories/releases"
@@ -94,28 +95,30 @@ repositories {
 }
 
 dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:26.+'
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
     compile('me.drakeet.multitype:multitype:3.3.0', {
         exclude group: 'com.android.support'
     })
+    //多样式多层级适配器
+    // Dalvik 可执行文件分包支持库
+
+    //网络加载框架
+    //图片加载
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
     compile 'com.jakewharton:butterknife-compiler:8.0.1'
     compile 'com.jakewharton:butterknife:8.0.1'
-    //多样式多层级适配器
-    // Dalvik 可执行文件分包支持库
     compile 'com.android.support:multidex:1.0.1'
-
-    //网络加载框架
     compile 'com.squareup.okhttp3:okhttp:3.9.1'
     compile 'com.google.code.gson:gson:2.2.4'
-    //图片加载
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.android.support:support-v4:26.+'
+    testCompile 'junit:junit:4.12'
 }

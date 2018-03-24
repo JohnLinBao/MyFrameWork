@@ -84,7 +84,7 @@ public class UserFragment extends Fragment {
 
     String city = "";
     String company = "";
-    String positin = "";
+    String position = "";
     private RecyclerView shareDialogRecyclerView;
     private MultiTypeAdapter shareDialogAdapter;
     private Items items;
@@ -163,8 +163,8 @@ public class UserFragment extends Fragment {
                     if (AppConfig.user.company != null)
                         company = AppConfig.user.company + "  ";
                     if (AppConfig.user.position != null)
-                        positin = AppConfig.user.position + "  ";
-                    userCompanyposition.setText(city + company + positin);
+                        position = AppConfig.user.position + "  ";
+                    userCompanyposition.setText(city + company + position);
                     /*编辑用户资料*/
                     userEditRelativelayout.setOnClickListener(new View.OnClickListener() {
                         @Override

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/select_industry_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:text="房地产jksjkdjkhi i速度快"
+        android:layout_margin="10dp"/>
+
+
+</RelativeLayout>

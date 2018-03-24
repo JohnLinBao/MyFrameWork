@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_header"></include>
+
+    <!--学校-->
+    <TextView
+        android:id="@+id/add_school_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学校"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/add_school"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="必填"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignLeft="@+id/add_degree"
+        android:layout_alignRight="@+id/add_degree"
+        android:layout_alignTop="@+id/add_school_title"
+        android:layout_alignBottom="@+id/add_school_title"
+        android:layout_marginRight="27dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/toolbar"
+        />
+
+    <ImageView
+        android:id="@+id/add_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_school_title"/>
+
+    <!--专业-->
+    <TextView
+        android:id="@+id/add_major_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="专业"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_line"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/add_major"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="必填"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignLeft="@+id/add_degree"
+        android:layout_alignRight="@+id/add_degree"
+        android:layout_alignTop="@+id/add_position_title"
+        android:layout_alignBottom="@+id/add_position_title"
+        android:layout_marginRight="27dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/add_line"/>
+
+    <ImageView
+        android:id="@+id/add_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_major_title"/>
+
+    <!--学历-->
+    <TextView
+        android:id="@+id/add_degree_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学历"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_line1"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/add_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="必选"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignTop="@+id/add_degree_title"
+        android:layout_alignBottom="@+id/add_degree_title"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/add_degree_arrow"
+        android:layout_below="@+id/add_line1"/>
+
+    <ImageView
+        android:id="@+id/add_degree_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_icon"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/add_line1"
+        android:layout_alignTop="@+id/add_degree_title"
+        android:layout_alignBottom="@+id/add_degree_title"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/add_line2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_degree_title"/>
+
+    <!--开始时间-->
+    <TextView
+        android:id="@+id/add_starttime_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始时间"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_line2"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/add_starttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="必选"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignTop="@+id/add_starttime_title"
+        android:layout_alignBottom="@+id/add_starttime_title"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/add_starttime_arrow"
+        android:layout_below="@+id/add_line2"/>
+
+    <ImageView
+        android:id="@+id/add_starttime_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_icon"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/add_line4"
+        android:layout_alignTop="@+id/add_starttime_title"
+        android:layout_alignBottom="@+id/add_starttime_title"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/add_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_starttime_title"/>
+
+    <!--结束时间-->
+    <TextView
+        android:id="@+id/add_endtime_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结束时间"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_line3"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/add_endtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="必选"
+        android:textSize="13sp"
+        android:background="@null"
+        android:layout_alignTop="@+id/add_endtime_title"
+        android:layout_alignBottom="@+id/add_endtime_title"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/add_endtime_arrow"
+        android:layout_below="@+id/add_line3"/>
+
+    <ImageView
+        android:id="@+id/add_endtime_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_icon"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/add_line3"
+        android:layout_alignTop="@+id/add_endtime_title"
+        android:layout_alignBottom="@+id/add_endtime_title"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/add_line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/add_endtime_title"/>
+
+
+
+</RelativeLayout>

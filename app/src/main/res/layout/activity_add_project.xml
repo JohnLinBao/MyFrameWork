@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_header"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--项目名称-->
+            <TextView
+                android:id="@+id/add_projectname_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目名称"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/add_projectname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="必填"
+                android:textSize="13sp"
+                android:background="@null"
+                android:layout_alignTop="@+id/add_projectname_title"
+                android:layout_alignBottom="@+id/add_projectname_title"
+                android:layout_marginRight="27dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+
+                />
+
+            <ImageView
+                android:id="@+id/add_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_below="@id/add_projectname_title"/>
+
+            <!--所属公司-->
+            <TextView
+                android:id="@+id/add_company_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="所属公司"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/add_line"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/add_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="必填"
+                android:textSize="13sp"
+                android:background="@null"
+                android:layout_alignTop="@+id/add_company_title"
+                android:layout_alignBottom="@+id/add_company_title"
+                android:layout_marginRight="27dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/add_line"/>
+
+            <ImageView
+                android:id="@+id/add_line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_below="@id/add_company_title"/>
+
+            <!--职责/角色-->
+            <TextView
+                android:id="@+id/add_duty_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="职责/角色"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/add_line1"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/add_duty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="必选"
+                android:textSize="13sp"
+                android:background="@null"
+                android:layout_alignTop="@+id/add_duty_title"
+                android:layout_alignBottom="@+id/add_duty_title"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/add_duty_arrow"
+                android:layout_below="@+id/add_line1"/>
+
+            <ImageView
+                android:id="@+id/add_duty_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_icon"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/add_line1"
+                android:layout_alignTop="@+id/add_duty_title"
+                android:layout_alignBottom="@+id/add_duty_title"
+                android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/add_line2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/grey"
+                android:layout_below="@id/add_duty_title"/>
+
+            <!--项目地点-->
+            <TextView
+                android:id="@+id/add_location_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目地点"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/add_line2"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/add_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="必选"
+                android:textSize="13sp"
+                android:background="@null"
+                android:layout_alignTop="@+id/add_location_title"
+                android:layout_alignBottom="@+id/add_location_title"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/add_location_arrow"
+                android:layout_below="@+id/add_line2"/>
+
+            <ImageView
+                android:id="@+id/add_location_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_icon"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/add_line2"
+                android:layout_alignTop="@+id/add_location_title"
+                android:layout_alignBottom="@+id/add_location_title"
+                android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/add_line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_below="@id/add_location_title"/>
+
+            <!--项目类型-->
+            <TextView
+                android:id="@+id/add_type_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目类型"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/add_line3"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/add_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请填写"
+                android:textSize="13sp"
+                android:background="@null"
+                android:layout_alignTop="@+id/add_type_title"
+                android:layout_alignBottom="@+id/add_type_title"
+                android:layout_marginRight="27dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/add_line"/>
+
+            <ImageView
+                android:id="@+id/add_line4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_below="@id/add_type_title"/>
+
+            <!--建筑面积-->
+            <TextView
+                android:id="@+id/add_area_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="建筑面积"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/add_line4"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/add_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="必选"
+                android:textSize="13sp"
+                android:background="@null"
+                android:layout_alignTop="@+id/add_area_title"
+                android:layout_alignBottom="@+id/add_area_title"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/add_area_centiare"
+                android:layout_below="@+id/add_line4"/>
+
+            <TextView
+                android:id="@+id/add_area_centiare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="㎡"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/add_line4"
+                android:layout_alignTop="@+id/add_area_title"
+                android:layout_alignBottom="@+id/add_area_title"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="7dp"/>
+
+            <ImageView
+                android:id="@+id/add_line5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_below="@id/add_area_title"/>
+
+            <!--规模-->
+            <TextView
+                android:id="@+id/add_scale_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="规模"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_alignTop="@+id/add_uplayer_count"
+                android:layout_alignBottom="@+id/add_downlayer_count"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/add_line5"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/add_uplayer_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请填写"
+                android:textSize="13sp"
+                android:background="@null"
+                android:inputType="number"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/add_uplayer"
+                android:layout_below="@+id/add_line5"/>
+
+            <TextView
+                android:id="@+id/add_uplayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地上层数"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/add_line5"
+                android:gravity="center"
+                android:layout_margin="10dp" />
+
+            <EditText
+                android:id="@+id/add_downlayer_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请填写"
+                android:textSize="13sp"
+                android:background="@null"
+                android:inputType="number"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@+id/add_downlayer"
+                android:layout_below="@+id/add_uplayer_count"/>
+
+            <TextView
+                android:id="@+id/add_downlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地下层数"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/add_uplayer"
+                android:gravity="center"
+                android:layout_margin="10dp" />
+
+            <ImageView
+                android:id="@+id/add_line6"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/grey"
+                android:layout_below="@id/add_downlayer"/>
+
+            <!--开始时间-->
+            <TextView
+                android:id="@+id/add_starttime_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始时间"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/add_line6"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/add_starttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="必选"
+                android:textSize="13sp"
+                android:background="@null"
+                android:layout_alignTop="@+id/add_starttime_title"
+                android:layout_alignBottom="@+id/add_starttime_title"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/add_starttime_arrow"
+                android:layout_below="@+id/add_line6"/>
+
+            <ImageView
+                android:id="@+id/add_starttime_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_icon"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/add_line6"
+                android:layout_alignTop="@+id/add_starttime_title"
+                android:layout_alignBottom="@+id/add_starttime_title"
+                android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/add_line7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_below="@id/add_starttime_title"/>
+
+            <!--结束时间-->
+            <TextView
+                android:id="@+id/add_endtime_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束时间"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/add_line7"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/add_endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="必选"
+                android:textSize="13sp"
+                android:background="@null"
+                android:layout_alignTop="@+id/add_endtime_title"
+                android:layout_alignBottom="@+id/add_endtime_title"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/add_endtime_arrow"
+                android:layout_below="@+id/add_line7"/>
+
+            <ImageView
+                android:id="@+id/add_endtime_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_icon"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/add_line7"
+                android:layout_alignTop="@+id/add_endtime_title"
+                android:layout_alignBottom="@+id/add_endtime_title"
+                android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/add_line8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_below="@id/add_endtime_title"/>
+
+            <!--项目描述-->
+            <TextView
+                android:id="@+id/add_description_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="项目描述"
+                android:background="@color/grey"
+                android:padding="10dp"
+                android:layout_below="@id/add_line8"/>
+
+            <EditText
+                android:id="@+id/add_description"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:textSize="13sp"
+                android:maxLength="1000"
+                android:hint="用1000个字以内描述一下项目内容"
+                android:layout_below="@+id/add_description_title"/>
+
+            <!--项目照片-->
+            <LinearLayout
+                android:id="@+id/add_photo_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_description"
+                android:orientation="vertical"
+                android:background="@color/grey">
+
+                <TextView
+                    android:id="@+id/add_photo_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="项目照片"
+                    android:padding="10dp" />
+
+                <ImageView
+                    android:id="@+id/add_photo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/shangchuanzhaopian"
+                    android:layout_gravity="left"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
