@@ -1,21 +1,12 @@
 package com.alfred.framework.module.model;
 
-import com.alfred.framework.utils.StringUtils;
-
-import java.util.List;
-
 /**
- * Created by asus on 2018/3/17.
+ * Created by asus on 2018/3/29.
  */
 
-public class User_Bean{
-    public int id;
-    public String uniqueId;
-    public String name;
-    public String avatar;
+public class BaseUser_Bean {
 
-    public User_Bean() {
-
+    public BaseUser_Bean() {
     }
 
     public int gender;
@@ -38,18 +29,4 @@ public class User_Bean{
     public int profession;
     public String professionName;
     public String brief;
-    public List<Education_Bean> education;
-
-    public List<Project_Bean> project;
-
-    public List<WorkExperience_Bean> workExperience;
-
-
-    public int topicCount;
-    public int recruitmentCount;
-    public int relatedTopicCount;
-    public String shareUrl;
-    public boolean friend;
-    public int friendCount;
-
 }

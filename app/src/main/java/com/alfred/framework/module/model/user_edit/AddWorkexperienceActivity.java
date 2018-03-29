@@ -10,20 +10,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alfred.framework.base.BaseActivity;
+import com.alfred.framework.module.model.WorkExperience_Bean;
 import com.alfred.framework.myframework.R;
+import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.qqtheme.framework.picker.DatePicker;
+import static com.alfred.framework.base.config.AppConfig.editUser;
 
 /**
  * Created by asus on 2018/3/24.
  */
 
 public class AddWorkexperienceActivity extends BaseActivity {
-    @BindView(R.id.toolbar_title)
-    TextView toolbarTitle;
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
+
+
     @BindView(R.id.add_company_title)
     TextView addCompanyTitle;
     @BindView(R.id.add_company)
@@ -42,12 +44,12 @@ public class AddWorkexperienceActivity extends BaseActivity {
     TextView addIndustry;
     @BindView(R.id.add_industry_arrow)
     ImageView addIndustryArrow;
-    @BindView(R.id.add_function_title)
-    TextView addFunctionTitle;
-    @BindView(R.id.add_function)
-    TextView addFunction;
-    @BindView(R.id.add_function_arrow)
-    ImageView addFunctionArrow;
+    @BindView(R.id.add_profession_title)
+    TextView addProfessionTitle;
+    @BindView(R.id.add_profession)
+    TextView addProfession;
+    @BindView(R.id.add_profession_arrow)
+    ImageView addProfessionArrow;
     @BindView(R.id.add_starttime_title)
     TextView addStarttimeTitle;
     @BindView(R.id.add_starttime)
@@ -64,9 +66,13 @@ public class AddWorkexperienceActivity extends BaseActivity {
     TextView addWorkdetailTitle;
     @BindView(R.id.add_workdetail)
     EditText addWorkdetail;
-
     final int INDUSTRY = 1;
-    private String industry = null;
+    final int PROFESSION = 2;
+    @BindView(R.id.delete_workexperience)
+    TextView deleteWorkexperience;
+    private WorkExperience_Bean workExperience_bean = new WorkExperience_Bean();
+    private int position = -1;
+
     @Override
     public void reload() {
 
@@ -95,6 +101,25 @@ public class AddWorkexperienceActivity extends BaseActivity {
 
     @Override
     public void disposeProcess() {
+        /**
+         * 判断workexperience是否为空
+         */
+        position = getIntent().getIntExtra("position", -1);
+        if (position != -1) {
+            deleteWorkexperience.setVisibility(View.VISIBLE);
+            workExperience_bean = editUser.workExperience.get(position);
+            addCompany.setText(workExperience_bean.company);
+            if (workExperience_bean.companyLogo != "")
+                Glide.with(AddWorkexperienceActivity.this).load(workExperience_bean.companyLogo).into(addCompanylogo);
+            else
+                addCompanylogo.setImageResource(R.drawable.shangchuanzhaopian);
+            addPosition.setText(workExperience_bean.position);
+            addIndustry.setText(workExperience_bean.industryName);
+            addProfession.setText(workExperience_bean.professionName);
+            addStarttime.setText(workExperience_bean.startTime);
+            addEndtime.setText(workExperience_bean.endTime);
+            addWorkdetail.setText(workExperience_bean.introduction);
+        }
         //选择细分行业
         addIndustry.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,8 +129,59 @@ public class AddWorkexperienceActivity extends BaseActivity {
             }
         });
 
+        //选择职能/专业
+        addProfession.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent professionIntent = new Intent(AddWorkexperienceActivity.this, SelectProfessionActivity.class);
+                startActivityForResult(professionIntent, PROFESSION);
+            }
+        });
 
+        //选择开始时间
+        addStarttime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePicker datePicker = new DatePicker(AddWorkexperienceActivity.this);
+                datePicker.setRange(1990, 2018);
+                datePicker.setOnDatePickListener(new DatePicker.OnYearMonthDayPickListener() {
+                    @Override
+                    public void onDatePicked(String year, String month, String day) {
+                        workExperience_bean.startTime = year + "-" + month + "-" + day;
+                        addStarttime.setText(workExperience_bean.startTime);
+                    }
+                });
+                datePicker.show();
+            }
+        });
 
+        //选择结束时间时间
+        addEndtime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePicker datePicker1 = new DatePicker(AddWorkexperienceActivity.this);
+                datePicker1.setRange(1990, 2018);
+                datePicker1.setOnDatePickListener(new DatePicker.OnYearMonthDayPickListener() {
+                    @Override
+                    public void onDatePicked(String year, String month, String day) {
+                        workExperience_bean.endTime = year + "-" + month + "-" + day;
+                        addEndtime.setText(workExperience_bean.endTime);
+                    }
+                });
+                datePicker1.show();
+            }
+        });
+
+        //删除
+        deleteWorkexperience.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editUser.workExperience.remove(position);
+                Intent intent = new Intent();
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
     }
 
     @Override
@@ -126,9 +202,16 @@ public class AddWorkexperienceActivity extends BaseActivity {
                 switch (item.getItemId()) {
                     case R.id.action_save:
                         Intent intent = new Intent();
-                        intent.putExtra("company", addCompany.getText().toString());
-                        intent.putExtra("position", addPosition.getText().toString());
-                        intent.putExtra("industry", industry);
+                        workExperience_bean.company = addCompany.getText().toString();
+                        workExperience_bean.position = addPosition.getText().toString();
+                        workExperience_bean.introduction = addWorkdetail.getText().toString();
+                        if (position != -1){
+                            editUser.workExperience.remove(position);
+                            editUser.workExperience.add(position, workExperience_bean);
+                        }else
+                            editUser.workExperience.add(workExperience_bean);
+                        setResult(RESULT_OK, intent);
+                        finish();
                         break;
                 }
                 return true;
@@ -141,13 +224,27 @@ public class AddWorkexperienceActivity extends BaseActivity {
         switch (requestCode) {
             case INDUSTRY:
                 if (resultCode == RESULT_OK) {
-                    String industry = intent.getStringExtra("industry");
-                    addIndustry.setText(industry);
+                    workExperience_bean.industryName = intent.getStringExtra("industryName");
+                    workExperience_bean.industry = intent.getIntExtra("industry", 0);
+                    addIndustry.setText(workExperience_bean.industryName);
                 }
                 break;
-
+            case PROFESSION:
+                if (resultCode == RESULT_OK) {
+                    workExperience_bean.professionName = intent.getStringExtra("professionName");
+                    workExperience_bean.profession = intent.getIntExtra("profession", 0);
+                    addProfession.setText(workExperience_bean.professionName);
+                }
+                break;
             default:
         }
     }
 
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
 }

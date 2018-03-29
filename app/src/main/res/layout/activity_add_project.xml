@@ -23,7 +23,6 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:layout_alignParentLeft="true"
-
                 android:layout_margin="10dp"/>
 
             <EditText
@@ -93,13 +92,12 @@
                 android:layout_below="@+id/add_line1"
                 android:layout_margin="10dp"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/add_duty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="必选"
+                android:text="必选"
                 android:textSize="13sp"
-                android:background="@null"
                 android:layout_alignTop="@+id/add_duty_title"
                 android:layout_alignBottom="@+id/add_duty_title"
                 android:gravity="center"
@@ -136,13 +134,13 @@
                 android:layout_below="@+id/add_line2"
                 android:layout_margin="10dp"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/add_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="必选"
+                android:text="必选"
                 android:textSize="13sp"
-                android:background="@null"
+
                 android:layout_alignTop="@+id/add_location_title"
                 android:layout_alignBottom="@+id/add_location_title"
                 android:gravity="center"
@@ -216,7 +214,7 @@
                 android:id="@+id/add_area"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="必选"
+                android:hint="必填"
                 android:textSize="13sp"
                 android:background="@null"
                 android:layout_alignTop="@+id/add_area_title"
@@ -331,13 +329,12 @@
                 android:layout_below="@+id/add_line6"
                 android:layout_margin="10dp"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/add_starttime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="必选"
+                android:text="必选"
                 android:textSize="13sp"
-                android:background="@null"
                 android:layout_alignTop="@+id/add_starttime_title"
                 android:layout_alignBottom="@+id/add_starttime_title"
                 android:gravity="center"
@@ -374,13 +371,12 @@
                 android:layout_below="@+id/add_line7"
                 android:layout_margin="10dp"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/add_endtime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="必选"
+                android:text="必选"
                 android:textSize="13sp"
-                android:background="@null"
                 android:layout_alignTop="@+id/add_endtime_title"
                 android:layout_alignBottom="@+id/add_endtime_title"
                 android:gravity="center"
@@ -449,7 +445,18 @@
                     android:padding="10dp" />
 
             </LinearLayout>
-
+            <TextView
+                android:id="@+id/delete_project"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="删除"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/btn_selector"
+                android:layout_below="@id/add_photo_linearlayout"/>
         </RelativeLayout>
     </ScrollView>
 </LinearLayout>

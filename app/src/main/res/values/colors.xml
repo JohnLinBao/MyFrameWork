@@ -15,4 +15,9 @@
     <color name="color_009FDC">#009FDC</color>
     <color name="word__hx">#e5e5e5</color>
     <color name="word__nx">#eeeeee</color>
+
+    <color name="background">#FFFFFF</color>
+    <color name="split_line">#11112233</color>
+    <color name="text1">#59B29C</color>
+    <color name="text2">#333333</color>
 </resources>

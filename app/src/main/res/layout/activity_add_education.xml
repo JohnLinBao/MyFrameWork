@@ -25,8 +25,6 @@
         android:hint="必填"
         android:textSize="13sp"
         android:background="@null"
-        android:layout_alignLeft="@+id/add_degree"
-        android:layout_alignRight="@+id/add_degree"
         android:layout_alignTop="@+id/add_school_title"
         android:layout_alignBottom="@+id/add_school_title"
         android:layout_marginRight="27dp"
@@ -61,10 +59,8 @@
         android:hint="必填"
         android:textSize="13sp"
         android:background="@null"
-        android:layout_alignLeft="@+id/add_degree"
-        android:layout_alignRight="@+id/add_degree"
-        android:layout_alignTop="@+id/add_position_title"
-        android:layout_alignBottom="@+id/add_position_title"
+        android:layout_alignTop="@+id/add_major_title"
+        android:layout_alignBottom="@+id/add_major_title"
         android:layout_marginRight="27dp"
         android:gravity="center"
         android:layout_alignParentRight="true"
@@ -89,13 +85,12 @@
         android:layout_below="@+id/add_line1"
         android:layout_margin="10dp"/>
 
-    <EditText
+    <TextView
         android:id="@+id/add_degree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="必选"
+        android:text="必选"
         android:textSize="13sp"
-        android:background="@null"
         android:layout_alignTop="@+id/add_degree_title"
         android:layout_alignBottom="@+id/add_degree_title"
         android:gravity="center"
@@ -132,13 +127,13 @@
         android:layout_below="@+id/add_line2"
         android:layout_margin="10dp"/>
 
-    <EditText
+    <TextView
         android:id="@+id/add_starttime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="必选"
+        android:text="必选"
         android:textSize="13sp"
-        android:background="@null"
+
         android:layout_alignTop="@+id/add_starttime_title"
         android:layout_alignBottom="@+id/add_starttime_title"
         android:gravity="center"
@@ -151,7 +146,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/arrow_icon"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/add_line4"
+        android:layout_below="@+id/add_line4"
         android:layout_alignTop="@+id/add_starttime_title"
         android:layout_alignBottom="@+id/add_starttime_title"
         android:layout_marginRight="10dp"/>
@@ -175,13 +170,13 @@
         android:layout_below="@+id/add_line3"
         android:layout_margin="10dp"/>
 
-    <EditText
+    <TextView
         android:id="@+id/add_endtime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="必选"
+        android:text="必选"
         android:textSize="13sp"
-        android:background="@null"
+
         android:layout_alignTop="@+id/add_endtime_title"
         android:layout_alignBottom="@+id/add_endtime_title"
         android:gravity="center"
@@ -206,6 +201,17 @@
         android:background="@color/grey"
         android:layout_below="@id/add_endtime_title"/>
 
-
+    <TextView
+        android:id="@+id/delete_education"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="删除"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/btn_selector"
+        android:layout_below="@id/add_endtime_title"/>
 
 </RelativeLayout>

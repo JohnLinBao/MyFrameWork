@@ -9,6 +9,7 @@ import android.util.Log;
 import com.alfred.framework.module.model.Dynamic_Bean;
 import com.alfred.framework.module.model.Login_Data;
 import com.alfred.framework.module.model.User_Bean;
+import com.alfred.framework.module.model.WorkExperience_Bean;
 import com.alfred.framework.utils.StringUtils;
 
 import java.util.List;
@@ -24,6 +25,7 @@ public class AppConfig {
 	 * 用于
 	 */
 	public static User_Bean user;
+	public static User_Bean editUser;
 	
 	/**
 	 * app所有信息存放空间索引，缓存配置

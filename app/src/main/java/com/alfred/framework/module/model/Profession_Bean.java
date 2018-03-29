@@ -11,6 +11,7 @@ public class Profession_Bean {
     public class ProfessionList{
         public int id;
         public String name;
+
         public List<SpecialList> list;
         public class SpecialList{
             public int id;

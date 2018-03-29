@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,10 +18,21 @@
             android:layout_marginTop="10dp"
             android:layout_alignParentLeft="true"/>
 
+        <TextView
+            android:id="@+id/item_workexperience_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑"
+            android:textColor="@color/theme_color"
+            android:textSize="13sp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"/>
+
         <ImageView
             android:id="@+id/item_workexperience_line"
             android:layout_width="1dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:background="@color/grey"
             android:layout_below="@+id/item_workexperience_image"
             android:layout_alignParentLeft="true"

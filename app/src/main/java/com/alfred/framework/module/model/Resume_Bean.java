@@ -93,6 +93,16 @@ public class Resume_Bean {
         public String endTime;
         public String introduction;
 
+        public WorkExperience(String company, String companyLogo, String position, String industryName, String professionName, String startTime, String endTime, String introduction) {
+            this.company = company;
+            this.companyLogo = companyLogo;
+            this.position = position;
+            this.industryName = industryName;
+            this.professionName = professionName;
+            this.startTime = startTime;
+            this.endTime = endTime;
+            this.introduction = introduction;
+        }
     }
     public String shareUrl;
 }

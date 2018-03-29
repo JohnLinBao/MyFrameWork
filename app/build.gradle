@@ -92,6 +92,7 @@ repositories {
     maven {
         url "http://maven.aliyun.com/nexus/content/repositories/releases"
     }
+
 }
 
 dependencies {
@@ -120,5 +121,7 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.android.support:support-v4:26.+'
+    compile 'cn.qqtheme.framework:AndroidPicker:latest.integration'
     testCompile 'junit:junit:4.12'
+
 }

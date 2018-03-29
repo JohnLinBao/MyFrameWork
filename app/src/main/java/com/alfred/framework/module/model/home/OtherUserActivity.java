@@ -18,6 +18,8 @@ import com.alfred.framework.http.OkHttpManager;
 import com.alfred.framework.module.LoginActivity;
 import com.alfred.framework.module.RegisterActivityOne;
 import com.alfred.framework.module.model.User_Bean;
+import com.alfred.framework.module.model.WorkExperience_Bean;
+import com.alfred.framework.module.model.user_edit.viewbinder.WorkExperienceViewBinder;
 import com.alfred.framework.myframework.R;
 import com.alfred.framework.utils.GsonUtils;
 import com.bumptech.glide.Glide;
@@ -169,7 +171,7 @@ public class OtherUserActivity extends BaseActivity {
                     otheruserDetailReleasedPosition.setText("发布的职位（" + user_bean.recruitmentCount + ")");
                     //工作经历
                     workExperienceAdapter = new MultiTypeAdapter();
-                    workExperienceAdapter.register(User_Bean.WorkExperience.class, new WorkExperienceViewBinder());
+                    workExperienceAdapter.register(WorkExperience_Bean.class, new WorkExperienceViewBinder());
                     otheruserDetailRecyclerview.setAdapter(workExperienceAdapter);
                     otheruserDetailRecyclerview.setLayoutManager(new LinearLayoutManager(OtherUserActivity.this));
                     workExperienceAdapter.setItems(user_bean.workExperience);

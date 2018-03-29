@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
+
+    <include layout="@layout/layout_header"></include>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="1dp"
+        android:layout_weight="1">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <include layout="@layout/layout_header"></include>
-
             <ImageView
                 android:id="@+id/useredit_head"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_below="@+id/toolbar"
                 android:layout_margin="10dp"
                 android:layout_alignParentLeft="true"/>
 
@@ -30,16 +31,13 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="5dp"
-
                 android:textColor="@color/black"
-                android:layout_below="@+id/toolbar"
                 android:layout_toRightOf="@+id/useredit_head"/>
 
             <ImageView
                 android:id="@+id/useredit_sex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_alignTop="@+id/useredit_name"
                 android:layout_alignBottom="@+id/useredit_name"
                 android:layout_toRightOf="@+id/useredit_name"/>
@@ -86,7 +84,6 @@
                 android:id="@+id/useredit_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:textColor="@android:color/holo_blue_dark"
                 android:textSize="8sp"
                 android:layout_alignTop="@+id/useredit_phone_image"
@@ -109,7 +106,6 @@
                 android:id="@+id/useredit_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:textColor="@color/theme_color"
                 android:textSize="8sp"
                 android:layout_alignTop="@+id/useredit_email_image"
@@ -120,7 +116,6 @@
                 android:id="@+id/useredit_companylogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_launcher"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/useredit_phone_image"
                 android:layout_alignBottom="@+id/useredit_email_image"/>
@@ -129,7 +124,6 @@
                 android:id="@+id/useredit_brife"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/useredit_email_image"
                 android:layout_marginLeft="10dp"
@@ -147,8 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_below="@+id/useredit_line"
-                >
+                android:layout_below="@+id/useredit_line">
 
                 <TextView
                     android:id="@+id/useredit_releasedanymic_count"
@@ -190,13 +183,25 @@
                 android:layout_margin="10dp"
                 android:layout_below="@id/useredit_dynamic_linearlayout"/>
 
+            <TextView
+                android:id="@+id/useredit_workexperience_increase"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加"
+                android:textSize="13sp"
+                android:textColor="@color/theme_color"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/useredit_dynamic_linearlayout"
+                android:layout_alignParentRight="true"/>
+
             <RelativeLayout
                 android:id="@+id/useredit_workexperience_relativelayout"
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@color/white"
-                android:layout_marginLeft="10dp"
+                android:layout_margin="10dp"
                 android:layout_below="@+id/useredit_workexperience_title">
 
                 <TextView
@@ -218,6 +223,16 @@
                     android:layout_alignBottom="@id/useredit_workexperience_add"
                     android:layout_marginRight="5dp"/>
             </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/useredit_workexperience_recyclerview"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/useredit_workexperience_relativelayout">
+            </android.support.v7.widget.RecyclerView>
+
             <!--教育经历-->
             <TextView
                 android:id="@+id/useredit_education_title"
@@ -227,7 +242,19 @@
                 android:text="教育经历"
                 android:textColor="@color/black"
                 android:layout_margin="10dp"
-                android:layout_below="@id/useredit_workexperience_relativelayout"/>
+                android:layout_below="@id/useredit_workexperience_recyclerview"/>
+
+            <TextView
+                android:id="@+id/useredit_education_increase"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加"
+                android:textSize="13sp"
+                android:textColor="@color/theme_color"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/useredit_workexperience_recyclerview"
+                android:layout_alignParentRight="true"/>
 
             <RelativeLayout
                 android:id="@+id/useredit_education_relativelayout"
@@ -235,7 +262,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@color/white"
-                android:layout_marginLeft="10dp"
+                android:layout_margin="10dp"
                 android:layout_below="@+id/useredit_education_title">
 
                 <TextView
@@ -257,6 +284,14 @@
                     android:layout_alignBottom="@id/useredit_education_add"
                     android:layout_marginRight="5dp"/>
             </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/useredit_education_recyclerview"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/useredit_education_relativelayout">
+            </android.support.v7.widget.RecyclerView>
             <!--项目经历-->
             <TextView
                 android:id="@+id/useredit_project_title"
@@ -266,7 +301,20 @@
                 android:text="项目经历"
                 android:textColor="@color/black"
                 android:layout_margin="10dp"
-                android:layout_below="@id/useredit_education_relativelayout"/>
+                android:layout_below="@id/useredit_education_recyclerview"/>
+
+
+            <TextView
+                android:id="@+id/useredit_project_increase"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加"
+                android:textSize="13sp"
+                android:textColor="@color/theme_color"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/useredit_education_recyclerview"
+                android:layout_alignParentRight="true"/>
 
             <RelativeLayout
                 android:id="@+id/useredit_project_relativelayout"
@@ -274,7 +322,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@color/white"
-                android:layout_marginLeft="10dp"
+                android:layout_margin="10dp"
                 android:layout_below="@+id/useredit_project_title">
 
                 <TextView
@@ -296,7 +344,13 @@
                     android:layout_alignBottom="@id/useredit_project_add"
                     android:layout_marginRight="5dp"/>
             </RelativeLayout>
-
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/useredit_project_recyclerview"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/useredit_project_relativelayout">
+            </android.support.v7.widget.RecyclerView>
         </RelativeLayout>
     </ScrollView>
 
@@ -308,7 +362,6 @@
         android:textSize="21sp"
         android:textColor="@color/white"
         android:background="@color/theme_color"
-        android:layout_alignParentBottom="true"
         android:gravity="center"/>
 
-</RelativeLayout>
+</LinearLayout>

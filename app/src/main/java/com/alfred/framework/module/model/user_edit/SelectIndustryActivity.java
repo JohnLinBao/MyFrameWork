@@ -92,7 +92,8 @@ public class SelectIndustryActivity extends BaseActivity {
             @Override
             public void OnChildClick(View v, int position, Common_Bean.CommonList data) {
                 Intent intent = new Intent();
-                intent.putExtra("industry", data.name);
+                intent.putExtra("industryName", data.name);
+                intent.putExtra("industry", data.id);
                 setResult(RESULT_OK, intent);
                 finish();
             }
@@ -117,7 +118,6 @@ public class SelectIndustryActivity extends BaseActivity {
 
     @Override
     public void hanldeToolbar() {
-
         barProxy.setTitle("细分行业", View.VISIBLE);
         barProxy.getToolbar().setNavigationIcon(R.drawable.back_icon);
         barProxy.getToolbar().setNavigationOnClickListener(new View.OnClickListener() {

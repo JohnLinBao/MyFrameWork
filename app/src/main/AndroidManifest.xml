@@ -48,6 +48,7 @@
         <activity android:name="com.alfred.framework.module.model.user_edit.AddProjectActivity"></activity>
         <activity android:name="com.alfred.framework.module.model.user_edit.SelectIndustryActivity"></activity>
         <activity android:name="com.alfred.framework.module.model.user_edit.SelectProfessionActivity"></activity>
+        <activity android:name="com.alfred.framework.module.model.user_edit.EditBaseUserActivity"></activity>
     </application>
 
 </manifest>

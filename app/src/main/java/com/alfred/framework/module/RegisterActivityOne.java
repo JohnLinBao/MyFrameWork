@@ -94,7 +94,7 @@ public class RegisterActivityOne extends BaseActivity  {
         @Override
         public void onSuccess(String result) {
             Type type = new TypeToken<BaseResponse<Token>>(){}.getType();
-            BaseResponse<Token> response = (BaseResponse<Token>) GsonUtils.fromJson(result, type);
+            BaseResponse<Token>  response= (BaseResponse<Token>) GsonUtils.fromJson(result, type);
             Message tempMsg = handler.obtainMessage();
             tempMsg.what = 2;
             Bundle bundle = new Bundle();

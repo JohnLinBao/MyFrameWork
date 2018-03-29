@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_project_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gongzuojignli_tiao_icon"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/item_project_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="编辑"
+        android:textColor="@color/theme_color"
+        android:textSize="13sp"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:id="@+id/item_project_line"
+        android:layout_width="1dp"
+        android:layout_height="180dp"
+        android:background="@color/grey"
+        android:layout_below="@+id/item_project_image"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/item_project_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/item_project_image"/>
+
+
+
+    <TextView
+        android:id="@+id/item_project_companyname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/item_project_date"
+        android:layout_toRightOf="@+id/item_project_line"
+        android:layout_below="@+id/item_project_date"/>
+
+    <TextView
+        android:id="@+id/item_project_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/item_project_date"
+        android:layout_toRightOf="@+id/item_project_line"
+        android:layout_below="@+id/item_project_companyname"/>
+
+    <TextView
+        android:id="@+id/item_project_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/item_project_date"
+        android:layout_toRightOf="@+id/item_project_line"
+        android:layout_below="@+id/item_project_area"/>
+
+    <TextView
+        android:id="@+id/item_project_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/item_project_date"
+        android:layout_toRightOf="@+id/item_project_line"
+        android:layout_below="@id/item_project_scale"/>
+
+    <TextView
+        android:id="@+id/item_project_introduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/item_project_date"
+        android:layout_toRightOf="@+id/item_project_line"
+        android:layout_below="@id/item_project_location"/>
+
+    <ImageView
+        android:id="@+id/item_project_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:textSize="13sp"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/item_project_date"
+        android:layout_toRightOf="@+id/item_project_line"
+        android:layout_below="@id/item_project_introduction"/>
+</RelativeLayout>

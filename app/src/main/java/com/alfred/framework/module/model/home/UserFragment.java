@@ -24,6 +24,7 @@ import com.alfred.framework.base.config.AppConfig;
 import com.alfred.framework.http.BaseResponse;
 import com.alfred.framework.http.OkHttpManager;
 import com.alfred.framework.module.model.User_Bean;
+import com.alfred.framework.module.model.WorkExperience_Bean;
 import com.alfred.framework.module.model.share.ShareDialogFragment;
 import com.alfred.framework.module.model.share.ShareDialogType;
 import com.alfred.framework.module.model.share.ShareDialogViewBinder;
